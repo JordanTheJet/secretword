@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secret Word</title>
+</head>
+<h1>Secret Word</h1>
+<body>
+<form name="myForm" id="myForm" onsubmit="return validateForm()">
+    Please enter T-mobile phone numbers: <br />
+    <input type="text" id="phonenumber1" value="1234567890" />
+    <input type="button" id="addNumber" value="Add Number" />
+    <br/>
+</form>
+
+
+<script src=="//code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<button onclick="SubmitButton()">Submit</button>
+
+</body>
+</html>
+
+<!-- 
+    //this script has 2 functions. addphone (textbox) and SubmitButton (read textboxes and push to array)
+    // one is add a textbox with assigned id "phonenumber"n where n is which number textbox it is
+<script>
+    let n = 1;
+    let m = 1; //ID
+    document.getElementById("addNumber").onclick = function addphone(x) {
+        
+        var form = document.getElementById("myForm");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.id = "phonenumber" + ++n;
+        var br = document.createElement("br");
+        form.appendChild(input);
+        form.appendChild(br);
+    }
+    //this SubmitButton function does an if to make sure they have atleast 3 players then pushes each item in the text box to the array
+    function SubmitButton() {
+    if(n<3){
+        console.log("You need at least 3 players to Secret Word!");
+    }
+        else{
+        while(m<=n){
+        pushitems(document.getElementById("phonenumber"+m).value) //push item into array
+        m++;
+        
+        }
+    }
+    }
+    </script> -->
