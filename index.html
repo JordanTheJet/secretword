@@ -1,52 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Secret Word</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-<h1>Secret Word</h1>
+
 <body>
-<form name="myForm" id="myForm" onsubmit="return validateForm()">
-    Please enter T-mobile phone numbers: <br />
-    <input type="text" id="phonenumber1" value="1234567890" />
-    <input type="button" id="addNumber" value="Add Number" />
-    <br/>
-</form>
+    <div class="w3-container w3-black" style="margin-bottom:30px">
+        <h1 style="text-align:center">
+            SecretWord
+        </h1>
+    </div>
+    <div>
+        <label for="phone">Enter your phone number:</label>
+        <form>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </form>
+    </div>
+    <div>
+        <form>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </form>
+    </div>
+    <div>
+        <form>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </form>
+    </div>
+    <div class="float">
+        <button type="submit" value="submit">GO</button>
+    </div>
+    <div>
+        <button type="submit" form="phone" value="submit">Add Players</button>
+    </div>
 
-
-<script src=="//code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="main.js"></script>
-<button onclick="SubmitButton()">Submit</button>
 
 </body>
-</html>
 
-<!-- 
-    //this script has 2 functions. addphone (textbox) and SubmitButton (read textboxes and push to array)
-    // one is add a textbox with assigned id "phonenumber"n where n is which number textbox it is
-<script>
-    let n = 1;
-    let m = 1; //ID
-    document.getElementById("addNumber").onclick = function addphone(x) {
-        
-        var form = document.getElementById("myForm");
-        var input = document.createElement("input");
-        input.type = "text";
-        input.id = "phonenumber" + ++n;
-        var br = document.createElement("br");
-        form.appendChild(input);
-        form.appendChild(br);
-    }
-    //this SubmitButton function does an if to make sure they have atleast 3 players then pushes each item in the text box to the array
-    function SubmitButton() {
-    if(n<3){
-        console.log("You need at least 3 players to Secret Word!");
-    }
-        else{
-        while(m<=n){
-        pushitems(document.getElementById("phonenumber"+m).value) //push item into array
-        m++;
-        
-        }
-    }
-    }
-    </script> -->
+</html>
